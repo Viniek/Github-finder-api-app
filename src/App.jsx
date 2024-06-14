@@ -1,20 +1,16 @@
 
-import './Header.css'
+import React from 'react';
+import Header from '../src/Pages/Header';
+import UserDetails from '../src/Pages/UserDetails';
+import './App.css';
 
-function Header() {
+function App() {
   return (
-    <>
-    <div className='top'>
-        <h1>GITHUB FINDER</h1>
-        <p>By <a href='https://github.com/Viniek'>Victory Njeri</a></p>
-        <div className='form'>
-        <input type='text' placeholder='enter a username' />
-        {/* <label for='search'>Search</label> */}
-        <button type='submit'>Search</button>
-     </div>
+    <div className='App'>
+      <Header />
+      <UserDetails />
     </div>
-    </>
-  )
+  );
 }
 
-export default Header;
+export default App;
