@@ -8,12 +8,16 @@ function Header() {
   const [inputValue, setInputValue] = useState('');
   const setUsername = useStore((state) => state.setUsername);
   const setUserData = useStore((state) => state.setUserData);
+  const setReposData = useStore((state) => state.setReposData);
+  const setFollowersData = useStore((state) => state.setFollowersData);
 
   const handleSearch = async () => {
     setUsername(inputValue);
     try {
-      const data = await fetchGitHubUser(inputValue);
-      setUserData(data);
+      const { userData, reposData, followersData } = await fetchGitHubUser(inputValue);
+      setUserData(userData);
+      setReposData(reposData);
+      setFollowersData(followersData);
     } catch (error) {
       console.error('Error fetching GitHub user:', error);
     }
