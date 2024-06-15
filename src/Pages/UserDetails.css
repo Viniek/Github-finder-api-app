@@ -1,13 +1,18 @@
 
 
 .user-details {
-    text-align: center;
+    text-align: left;
     padding: 1rem;
     background-color: #f4f4f4;
     margin: 1rem;
+    margin-top: 5.5rem;
     border-radius: 8px;
-  }
-  
+    background-attachment: fixed;
+   margin-right:80%;
+   height:100vh;
+   position: fixed;
+
+}
   .user-details img {
     width: 150px;
     height: 150px;

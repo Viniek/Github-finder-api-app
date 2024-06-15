@@ -1,8 +1,9 @@
-/* src/Repositories.css */
+
 
 .repositories {
     text-align: center;
     padding: 1rem;
+    margin-left: 20%;
   }
   
   .repos-list {

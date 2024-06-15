@@ -9,6 +9,7 @@
     color: rgb(195, 218, 224);
     justify-content: space-around;
     align-items: center;
+    position: fixed;
   }
   
   .nav_container a {
