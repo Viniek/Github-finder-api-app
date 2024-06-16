@@ -1,6 +1,6 @@
 
 import React from 'react';
-import useStore from './store';
+import useStore from '../Pages/store';
 import './Repositories.css';
 
 function Repositories() {
@@ -20,6 +20,10 @@ function Repositories() {
               {repo.name}
             </a>
             <p>{repo.description}</p>
+            <div className="repo-stats">
+              <span>🍴 {repo.forks_count} forks</span>
+              <span>⭐ {repo.stargazers_count} stars</span>
+            </div>
           </div>
         ))}
       </div>

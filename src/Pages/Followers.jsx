@@ -1,7 +1,7 @@
 
 import React from 'react';
-import useStore from './store';
-import './Followers.css'
+import useStore from '../Pages/store';
+import './Followers.css';
 
 function Followers() {
   const followers = useStore((state) => state.followersData);

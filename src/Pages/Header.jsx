@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import useStore from './store';
-import { fetchGitHubUser } from './api';
+import useStore from '../Pages/store';
+import { fetchGitHubUser } from '../Pages/api';
 import './Header.css';
 
 function Header() {
@@ -14,12 +14,19 @@ function Header() {
   const handleSearch = async () => {
     setUsername(inputValue);
     try {
-      const { userData, reposData, followersData } = await fetchGitHubUser(inputValue);
+      const userResponse = await fetch(`https://api.github.com/users/${inputValue}`);
+      const userData = await userResponse.json();
       setUserData(userData);
+
+      const reposResponse = await fetch(userData.repos_url);
+      const reposData = await reposResponse.json();
       setReposData(reposData);
+
+      const followersResponse = await fetch(userData.followers_url);
+      const followersData = await followersResponse.json();
       setFollowersData(followersData);
     } catch (error) {
-      console.error('Error fetching GitHub user:', error);
+      console.error('Error fetching data:', error);
     }
   };
 

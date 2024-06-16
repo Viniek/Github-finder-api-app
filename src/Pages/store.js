@@ -2,7 +2,7 @@
 import create from 'zustand';
 
 const useStore = create((set) => ({
-  username: '',
+  username: 'viniek',
   userData: null,
   reposData: null,
   followersData: null,
