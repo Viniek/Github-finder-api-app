@@ -7,9 +7,10 @@
     padding: 1.5rem 1rem;
     background-color: rgb(24, 24, 66);
     color: rgb(195, 218, 224);
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
+    min-width: 100%;
   }
   
   .nav_container a {

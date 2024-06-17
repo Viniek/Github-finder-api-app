@@ -16,7 +16,7 @@ function Repositories() {
       <div className="repos-list">
         {repos.map((repo) => (
           <div key={repo.id} className="repo-item">
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+            <a href={repo.html_url} target="_blank" rel="">
               {repo.name}
             </a>
             <p>{repo.description}</p>

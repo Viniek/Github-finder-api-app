@@ -17,7 +17,7 @@ function Followers() {
         {followers.map((follower) => (
           <div key={follower.id} className="follower-item">
             <img src={follower.avatar_url} alt={`${follower.login} avatar`} />
-            <a href={follower.html_url} target="_blank" rel="noopener noreferrer">
+            <a href={follower.html_url} target="_blank" >
               {follower.login}
             </a>
           </div>
