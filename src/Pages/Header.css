@@ -3,11 +3,11 @@
 .nav_container {
     display: flex;
     flex-direction: row;
-    gap: 22rem;
+    gap:19rem;
     padding: 1.5rem 1rem;
     background-color: rgb(24, 24, 66);
     color: rgb(195, 218, 224);
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     min-width: 100%;
